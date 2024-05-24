@@ -1,0 +1,9 @@
+.sizing{
+    width: 33px;
+    height: 52px;       
+}   
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

@@ -1,0 +1,233 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    display: flex;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.lower_upper{
+    width: 35vw;  
+    height: 25vh;
+    margin: 10px;
+    padding: 10px;
+    background-color: #121212;
+    border-radius: 10px;
+}
+.lower_down{
+    width: 35vw;  
+    height: 75vh;  
+    margin: 10px;
+    padding: 10px;
+    background-color: #121212;
+    border-radius: 10px;
+} 
+.right_part{
+    width: 75vw;
+    margin: 10px;
+    padding: 10px;
+    height: 105vh;
+    background-color: #121212;
+    color: white;
+    border-radius: 10px;
+}
+.right_part_up{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: black;
+    border-radius: 20px;
+}
+img{
+    filter: invert(1);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.left_part :nth-child(1){
+    list-style: none;
+}
+ul{
+    margin: 30px 0px 0px 20px;
+
+}
+ul li{
+    margin: 20px;
+    display: flex;
+    gap:20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sm_img{
+    width: 30px;
+    height: 30px;
+}
+.library_part{
+    margin: 0px;
+}
+.link_issue{
+    margin-top: 30px;
+    display: grid;
+    /* position:absolute; */
+    grid-template-columns: .5fr 1fr .9fr;
+    row-gap: 30px;
+    column-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+button{
+    margin: 50px 0px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: inherit;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 2px 7px;
+    cursor: pointer;
+}
+.scrolle_mid{
+    height: 20vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #322f2f ;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 30px;
+}
+
+.scrolle_mid::-webkit-scrollbar{
+    display: none;
+}
+
+.earth_logo{
+    width: 20px;
+    height: 30px;
+}
+
+.left-right_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-rignt{
+    background-color: black;
+    padding: 5px;
+    border-radius: 20px;
+}
+.left-right_main li{
+    margin: 3px;
+}
+.left-rignt img{
+    cursor: pointer;
+    width: 20px;
+    display: flex;
+}
+.signin_signup{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.signin_signup p{
+    color: #9f9f9f;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.signin_signup button{
+    margin: 0px;
+    padding: 16px 25px;
+    background-color: white;
+    color: black;
+}
+
+.artist_part{
+    filter: invert(0);
+}
+.artist_card img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    filter: invert(0);
+    object-fit: contain;
+}
+.artist_card{
+    width: 300px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.img_artist{
+    padding: 20px;
+}
+.artist_card:hover{
+    background-color: #1a1a1a;
+}
+.para{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.para :nth-child(1){
+    font-weight: 800;
+}
+.para :nth-child(2){
+    font-family: serif;
+    font-weight:50;
+}
+
+.aritist_part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.play_containt{
+    position: relative;
+    width: 38px;
+    background-color: green;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    bottom: 128px;
+    left: 106px;
+}
+.play_button img{
+    width: 30px;
+}
+.artist_card:hover{
+    animation: MY_animation 1s esay-in 1;
+}
+
+.play_listing_list{
+    padding-left: 11px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin: 20px 0px 30px 0px;
+}
+
+.play_listing_list > a:hover{
+    text-decoration: underline;
+}
