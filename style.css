@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --fonting:"Poppins", sans-serif;
+    --fontzing:700;
+    --font_styling:normal;
+}
 *{
     margin: 0px;
     padding: 0px;
+    font-family: var(--fonting);
+    font-weight: var(--fonting);
 }
 .container{
     display: flex;
@@ -10,7 +18,7 @@ body{
     color: white;
 }
 .lower_upper{
-    width: 35vw;  
+    width: 30vw;  
     height: 25vh;
     margin: 10px;
     padding: 10px;
@@ -18,24 +26,32 @@ body{
     border-radius: 10px;
 }
 .lower_down{
-    width: 35vw;  
-    height: 75vh;  
+    width: 30vw;  
+    height: 92vh;  
     margin: 10px;
     padding: 10px;
     background-color: #121212;
     border-radius: 10px;
-} 
+}
+.right_part::-webkit-scrollbar{
+    display: none;
+}
 .right_part{
-    width: 75vw;
+    width: 80vw;
     margin: 10px;
     padding: 10px;
-    height: 105vh;
+    height:123vh;
+    overflow: auto;
+    /* scrollbar-width: 0px; */
     background-color: #121212;
     color: white;
     border-radius: 10px;
 }
 .right_part_up{
     display: flex;
+    padding:8px;
+    position: absolute;
+    z-index: 20;
     justify-content: space-between;
     align-items: center;
     position: -webkit-sticky; /* Safari */
@@ -51,7 +67,6 @@ a{
     text-decoration: none;
     color: white;
 }
-
 .left_part :nth-child(1){
     list-style: none;
 }
@@ -75,14 +90,14 @@ ul li{
     margin: 0px;
 }
 .link_issue{
-    margin-top: 30px;
+    margin: 30px;
     display: grid;
     /* position:absolute; */
     grid-template-columns: .5fr 1fr .9fr;
     row-gap: 30px;
     column-gap: 20px;
-    justify-items: center;
-    align-items: center;
+    justify-items: start;
+    align-items: baseline;
 }
 button{
     margin: 50px 0px 30px 30px;
@@ -100,15 +115,15 @@ button{
     cursor: pointer;
 }
 .scrolle_mid{
-    height: 20vh;
+    height: 40vh;
     overflow: auto;
     -ms-overflow-style: none;
     border-radius: 10px;
-    padding: 20px;
-    background-color: #322f2f ;
-    font-size: 20px;
-    word-spacing: 5px;
-    line-height: 30px;
+    padding: 5px;
+    background-color: #322f2f;
+    font-size: 19px;
+    word-spacing: 0px;
+    line-height: 24px;
 }
 
 .scrolle_mid::-webkit-scrollbar{
@@ -130,7 +145,7 @@ button{
     padding: 5px;
     border-radius: 20px;
 }
-.left-right_main li{
+.left-right_main >li{
     margin: 3px;
 }
 .left-rignt img{
@@ -172,10 +187,17 @@ button{
     width: 300px;
     margin: 10px;
     border-radius: 20px;
+    padding: 10px;
 }
 .img_artist{
     padding: 20px;
 }
+
+.right_upp ul{
+    margin: 0px;
+}
+
+
 .artist_card:hover{
     background-color: #1a1a1a;
 }
@@ -200,6 +222,12 @@ button{
     align-items: center;
 }
 
+.artist_card:hover{
+    .play_containt{
+        opacity: 1;
+        bottom: 128px;
+    }
+}
 
 .play_containt{
     position: relative;
@@ -210,8 +238,10 @@ button{
     justify-content: center;
     align-items: center;
     padding: 7px;
-    bottom: 128px;
-    left: 106px;
+    bottom: 100px;
+    left: 166px;
+    opacity: 0;
+    transition: all 1s cubic-bezier(0, 0, 0.57, 1.14);
 }
 .play_button img{
     width: 30px;
@@ -225,9 +255,107 @@ button{
     font-size: 30px;
     font-weight: bold;
     margin-top: 20px;
-    margin: 20px 0px 30px 0px;
+    margin:10px 0px 3px 0px;
 }
 
 .play_listing_list > a:hover{
     text-decoration: underline;
+}
+
+h2 a:hover{
+    text-decoration: underline;
+}
+
+.album img{
+    border-radius: 7%;
+}
+
+.Play_bar{
+    margin:8px 11px 16px -5px;
+    border-radius: 5px;
+    background-color: rgb(3, 128, 3);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    bottom: -9px;
+    width: -webkit-fill-available;
+}
+
+.Play_bar div{
+    padding: 10px;
+}
+
+.play_icons_for_music ul{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+/* 
+.play_icons_for_music{
+    position: fixed;
+
+} */
+
+
+ol{
+    display: list-item;
+}
+
+.scrolle_mid ul{
+    margin: 0px;
+}
+
+.scrolle_mid ul li{
+    border: 2px solid white;
+    margin: 8px;
+    padding: 16px;
+    width: 408px;
+    border-radius: 18px;
+}
+
+.scrolle_mid ul li >div{
+    display: flex;
+    gap: 7px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.music_play_on_click{
+    width: 33px;
+}
+
+.scrolle_mid .info{
+    width: 294px;
+    
+}
+
+.duration_song{
+    position: absolute;
+    z-index: 30;
+    border: 2px solid white;
+    width: -webkit-fill-available;
+    bottom: 4px;
+    height: 1px;
+    padding: -17px;
+    margin:5px;
+    border-radius: 5px;
+    background-color: white;
+}
+.duration_song  .duration_circle{
+    position: absolute;
+    background-color: #0b0b0b;
+    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    padding: 6px;
+    bottom: -2.5px;
+    margin: -3px;
+    transition: all 1s ease-in;
+}
+#dur_song{
+    padding: 0px;
 }
